@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>5.2.7.20200610</Version>
+    <AssemblyVersion>5.2.7.0</AssemblyVersion>
+    <FileVersion>5.2.7.0</FileVersion>
+    <PackageId>Quick.MySQL.Data</PackageId>
+    <RepositoryUrl>https://github.com/aaasoft/Quick.MySQL.Data</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/aaasoft/Quick.MySQL.Data</PackageProjectUrl>
+    <Authors>aaasoft</Authors>
+    <Product>Quick.MySql.Data</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="docs\MySqlCommand.xml" />
+    <None Remove="docs\MySqlCommandBuilder.xml" />
+    <None Remove="docs\MySqlConnection.xml" />
+    <None Remove="docs\MySqlConnectionStringBuilder.xml" />
+    <None Remove="docs\MySqlDataAdapter.xml" />
+    <None Remove="docs\MySqlDataReader.xml" />
+    <None Remove="docs\MySqlException.xml" />
+    <None Remove="docs\MySqlHelper.xml" />
+    <None Remove="docs\MySqlParameter.xml" />
+    <None Remove="docs\MySqlParameterCollection.xml" />
+    <None Remove="docs\MySqlTransaction.xml" />
+    <None Remove="Properties\ReservedWords.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="docs\MySqlCommand.xml" />
+    <Content Include="docs\MySqlCommandBuilder.xml" />
+    <Content Include="docs\MySqlConnection.xml" />
+    <Content Include="docs\MySqlConnectionStringBuilder.xml" />
+    <Content Include="docs\MySqlDataAdapter.xml" />
+    <Content Include="docs\MySqlDataReader.xml" />
+    <Content Include="docs\MySqlException.xml" />
+    <Content Include="docs\MySqlHelper.xml" />
+    <Content Include="docs\MySqlParameter.xml" />
+    <Content Include="docs\MySqlParameterCollection.xml" />
+    <Content Include="docs\MySqlTransaction.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\ReservedWords.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
