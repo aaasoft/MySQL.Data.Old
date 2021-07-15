@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>5.2.7-20210715</Version>
     <AssemblyVersion>5.2.7.0</AssemblyVersion>
@@ -13,6 +13,9 @@
     <Product>Quick.MySql.Data</Product>
   </PropertyGroup>
 
+  <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
   <ItemGroup>
     <None Remove="docs\MySqlCommand.xml" />
     <None Remove="docs\MySqlCommandBuilder.xml" />
