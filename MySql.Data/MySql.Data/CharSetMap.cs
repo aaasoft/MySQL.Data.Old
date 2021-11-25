@@ -45,9 +45,9 @@ namespace MySql.Data.MySqlClient
 
         public static CharacterSet GetCharacterSet(DBVersion version, string CharSetName)
         {
-            CharacterSet cs = (CharacterSet) mapping[CharSetName];
-            if (cs == null)
+            if (!mapping.ContainsKey(CharSetName))
                 throw new MySqlException("Character set '" + CharSetName + "' is not supported");
+            CharacterSet cs = (CharacterSet)mapping[CharSetName];
             return cs;
         }
 
